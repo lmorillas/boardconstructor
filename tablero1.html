@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tablero</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <style>
+    h1 {
+        text-align: center;
+        font-size: 350%;
+    }
+    p {
+        text-align: center;
+    }
+    img {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    div.imagen:hover {
+
+        box-shadow: 0 0 20px #f00;
+
+    }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>¿Qué te pasa hija?</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 imagen"><img class="img-responsive" src="dolor de cabeza.png" alt="dolor de cabeza" title="dolor de cabeza" />
+                <p>LA CABEZA</p>
+            </div>
+            <div class="col-md-2 imagen"><img class="img-responsive" src="dolor de oído.png" alt="dolor de oído" title="dolor de oído" />
+                <p>EL OÍDO</p>
+            </div>
+            <div class="col-md-2 imagen"><img class="img-responsive" src="dolor de estómago.png" alt="dolor de estómago">
+                <p>EL ESTÓMAGO</p>
+            </div>
+            <div class="col-md-2 imagen"><img class="img-responsive" src="dolor de pierna.png" alt="dolor pierna">
+            </div>
+            <div class="col-md-2 imagen"><img class="img-responsive" src="dolor de garganta.png" alt="dolor de garganta">
+            </div>
+            <div class="col-md-2 imagen"><img class="img-responsive" src="dolor de muelas.png" alt="dolor de muelas">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">&nbsp;</div>
+        </div>
+        <div class="row" style="margin-top:100px;">
+            <div class="col-md-3"></div>
+            <div class="col-md-2"><img class="img-responsive" src="me.png" alt="A mi" title="A mi" />
+            </div>
+            <div class="col-md-2"><img class="img-responsive" src="dolor.png" alt="Me duele" title="Me duele" />
+            </div>
+            <div class="col-md-2"><img id="dolor" class="img-responsive" src="interrogacion.png" alt="?" title="?" />
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script>
+    $("img").click(function() {
+        var imagen = $(this).attr("src");
+        $(this).fadeOut();
+        $(this).fadeIn();
+        $("#dolor").attr("src", imagen);
+    });
+    </script>
+
+</body>
+
+</html>
