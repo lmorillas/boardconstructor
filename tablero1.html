@@ -87,6 +87,14 @@
 
 
     <script>
+    var sonidos = {
+        "dolor de cabeza" : "cabeza.mp3",
+        "dolor de oído" : "oido.mp3",
+        "dolor de estómago": "estomago.mp3",
+        "dolor pierna": "pierna.mp3",
+        "dolor de garganta": "garganta.mp3",
+        "dolor de muelas" : "muelas.mp3"
+    }
     $("img.sel").click(function() {
         //var imagen = $(this).attr("src");
         $(this).fadeOut();
@@ -94,7 +102,7 @@
         $("#dolor").attr("src", $(this).attr("src"));
         $("#dolor").attr("title", $(this).attr("title"));
         $("#dolor").attr("alt", $(this).attr("alt"));
-        $("#audio").attr("src", "cabeza.mp3");
+        $("#audio").attr("src", sonidos[$(this).attr("alt")]);
         $("#audio")[0].play();
 
 
